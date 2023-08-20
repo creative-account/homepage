@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="hero is-primary">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+          <nav class="navbar">
+            <div class="container">
+              <div class="navbar-brand">
+                <a class="navbar-item" href="https://www.google.com">
+                  <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                </a>
+                <span class="navbar-burger" data-target="navbarMenuHeroA">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div id="navbarMenuHeroA" class="navbar-menu">
+                <div class="navbar-end">
+                  <a class="navbar-item is-active">
+                    Home
+                  </a>
+                  <a class="navbar-item">
+                    Download
+                  </a>
+                  <a class="navbar-item">
+                    Links
+                  </a>
+                  <a class="navbar-item">
+                    Contact 
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <p class="title">
+              Title
+            </p>
+            <p class="subtitle">
+              Subtitle
+            </p>
+          </div>
+        </div>
+      
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+          <nav class="tabs">
+            <div class="container">
+              <ul>
+                <li class="is-active"><a>Overview</a></li>
+                <li><a>Modifiers</a></li>
+                <li><a>Grid</a></li>
+                <li><a>Elements</a></li>
+                <li><a>Components</a></li>
+                <li><a>Layout</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <textarea name="" class="textarea message" id="" placeholder="Hello world" rows="10"></textarea>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" onclick="submitMessage()">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <script>
+        function submitMessage() {
+        const message = document.querySelector('.message').value;
+        const encodedMessage = encodeURIComponent(message);
+        
+        fetch('https://script.google.com/macros/s/AKfycbyM9vqIK71n9Vxb657UiZGihkZy9i3Y-3eVmafpJmgJg8aLHVrJGiHUint-d10r8vb5/exec?q=' + encodedMessage, {
+        method: 'GET',
+        mode: 'cors' // CORSモードを指定
+        })
+        .then(response => response.text())
+        .then(data => {
+        console.log(data);
+        })
+        .catch(error => {
+        console.error('Error:', error);
+        });
+        }
+      </script>
+  </body>
+</html>
