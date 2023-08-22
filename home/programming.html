@@ -27,13 +27,13 @@
                   <a class="navbar-item is-active">
                     Home
                   </a>
-                  <a class="navbar-item">
-                    Download
-                  </a>
-                  <a class="navbar-item">
+                  <a class="navbar-item" href="/links/links.html">
                     Links
                   </a>
-                  <a class="navbar-item">
+                  <a class="navbar-item" href="/download/software.html">
+                    Download
+                  </a>
+                  <a class="navbar-item" href="/contact/contact.html">
                     Contact 
                   </a>
                 </div>
@@ -56,15 +56,15 @@
       
         <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
-          <nav class="tabs">
+          <nav class="tabs is-boxed is-fullwidth">
             <div class="container">
               <ul>
-                <li class="is-active"><a>Overview</a></li>
-                <li><a>Modifiers</a></li>
-                <li><a>Grid</a></li>
-                <li><a>Elements</a></li>
-                <li><a>Components</a></li>
-                <li><a>Layout</a></li>
+                <li><a href="all.html">ALL</a></li>
+                <li><a href="mathematics.html">Mathematics</a></li>
+                <li><a href="gadget.html">Gadget</a></li>
+                <li class="is-active"><a>Programming</a></li>
+                <li><a href="video editing.html">Video Editing</a></li>
+                <li><a href="others.html">Others</a></li>
               </ul>
             </div>
           </nav>
@@ -72,32 +72,10 @@
       </section>
       <section class="section">
         <div class="container">
-          <textarea name="" class="textarea message" id="" placeholder="Hello world" rows="10"></textarea>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link" onclick="submitMessage()">Submit</button>
-            </div>
-            <div class="control">
-              <button class="button is-link is-light">Cancel</button>
-            </div>
+          <h2 class="is-size-3">Category : Programming の記事</h2>
+          <div>
+            
           </div>
         </div>
-      </section>
-
-
-      <script>
-        function submitMessage() {
-          const message = document.querySelector('.message').value;
-          const encodedMessage = encodeURIComponent(message);
-          fetch('https://script.google.com/macros/s/AKfycbzQTXPIT8enrSNOE7Cz2PdhaBZHs-EalbofM_kaOC3m9qXmAKfIpt7n5B_9sR-RpJOT/exec?q=' + encodedMessage)
-            .then(response => response.text())
-            .then(data => {
-              console.log(data);
-            })
-            .catch(error => {
-              console.error('Error:', error);
-            });
-        }
-      </script>
   </body>
 </html>
