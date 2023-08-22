@@ -87,20 +87,16 @@
 
       <script>
         function submitMessage() {
-        const message = document.querySelector('.message').value;
-        const encodedMessage = encodeURIComponent(message);
-        
-        fetch('https://script.google.com/macros/s/AKfycbyM9vqIK71n9Vxb657UiZGihkZy9i3Y-3eVmafpJmgJg8aLHVrJGiHUint-d10r8vb5/exec?q=' + encodedMessage, {
-        method: 'GET',
-        mode: 'cors' // CORSモードを指定
-        })
-        .then(response => response.text())
-        .then(data => {
-        console.log(data);
-        })
-        .catch(error => {
-        console.error('Error:', error);
-        });
+          const message = document.querySelector('.message').value;
+          const encodedMessage = encodeURIComponent(message);
+          fetch('https://script.google.com/macros/s/AKfycbzQTXPIT8enrSNOE7Cz2PdhaBZHs-EalbofM_kaOC3m9qXmAKfIpt7n5B_9sR-RpJOT/exec?q=' + encodedMessage)
+            .then(response => response.text())
+            .then(data => {
+              console.log(data);
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
         }
       </script>
   </body>
